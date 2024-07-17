@@ -1,0 +1,9 @@
+// The current database to use.
+use('platzi_store');
+
+// Create a new document in the collection.
+db.getCollection('products').insertOne({
+ "_id":ObjectId("62f561573aac1ff435938461"),
+ "name": "Product 1",
+ "price":1200
+});
