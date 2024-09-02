@@ -1,0 +1,14 @@
+use("sample_training")
+
+db.trips.find(
+    // query
+    {
+        tripduration: { $gte: 360 }
+    },
+    // projection
+    {
+        _id:-1,
+        tripduration:1,
+        usertype:1        
+    }
+)

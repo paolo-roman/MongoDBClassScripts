@@ -1,0 +1,11 @@
+use("platzi_store")
+
+// db.inventory.find({ "item.description": { $regex: /line/ } })
+// to search upper and lower case
+// db.inventory.find({ "item.description": { $regex: /LINE/i } })
+// to search the string at the end
+// db.inventory.find({ "item.description": { $regex: /LINE$/i } })
+// to search the string and the beging
+// db.inventory.find({ "item.description": { $regex: /^single/i } })
+// to search in multiple lines
+db.inventory.find({ "item.description": { $regex: /^s/im } })

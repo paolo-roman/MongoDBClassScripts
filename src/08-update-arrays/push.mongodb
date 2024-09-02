@@ -1,0 +1,29 @@
+use("platzi_store")
+
+// push one element
+db.inventory.updateOne(
+    {
+        _id: 4
+    },
+    {
+        // to add objects to an array
+        $push: {
+            tags: "headphone"
+        }
+    }
+)
+
+// push more than one element
+db.inventory.updateOne(
+    {
+        _id: 5
+    },
+    {
+        // to add objects to an array
+        $push: {
+            tags: {
+                $each: ["headphone","speakers"]
+            }
+        }
+    }
+)
